@@ -27,9 +27,11 @@ int main(int argc, char *argv[])
         printf("\n-=-=-=-=-=-=-=-=-=-=-=-=-=-\n");
         printf(" Access Granted.\n");
         printf("-=-=-=-=-=-=-=-=-=-=-=-=-=-\n");
+        printf("Exited with \n", check_authentication(argv[1]));
     }
     else
     {
         printf("\nAccess Denied.\n");
+        printf("Exited with \n", check_authentication(argv[1]));
     }
 }
