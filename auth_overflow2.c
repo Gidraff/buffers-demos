@@ -35,6 +35,6 @@ int main(int argc, char *argv[])
     }
     else
     {
-        printf("\n Access Denined.\n");
+        printf("\n Access Denied.\n");
     }
 }
