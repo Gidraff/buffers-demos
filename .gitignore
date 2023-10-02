@@ -3,3 +3,4 @@ bin/
 a.out.dSYM/
 output/
 *.dSYM/
+.vscode/
