@@ -4,3 +4,4 @@ a.out.dSYM/
 output/
 *.dSYM/
 .vscode/
+*.o
