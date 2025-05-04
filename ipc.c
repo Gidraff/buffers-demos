@@ -2,10 +2,11 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <sys/wait.h>
+#include <sys/mman.h>
 
 #define N 10
 
-int xs[N];
+int *xs = 0;
 
 void print_xs()
 {
@@ -20,6 +21,11 @@ void print_xs()
 
 int main(int argc, char *argv[])
 {
+    xs = mmap(NULL, N * sizeof(int),
+              PROT_READ | PROT_WRITE,
+              MAP_SHARED | MAP_ANONYMOUS,
+              0, 0);
+
     for (int i = 0; i < N; ++i)
     {
         xs[i] = i + 1;
